@@ -1,0 +1,258 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.logoIcon {
+  color: var(--primary-accent);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--secondary-accent), var(--primary-accent));
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+}
+
+.btnPrimaryLg {
+  background: linear-gradient(135deg, var(--secondary-accent), var(--primary-accent));
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btnPrimaryLg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+}
+
+.btnSecondaryLg {
+  background: transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 1px solid var(--text-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnSecondaryLg:hover {
+  border-color: #fff;
+  color: var(--primary-accent);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 6rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 70vh;
+}
+
+.heroContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #fff, var(--primary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Radar Animation for Visual */
+.heroVisual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radarSweep {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 50px rgba(0, 212, 255, 0.1);
+}
+
+.radarRing {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 212, 255, 0.2);
+  position: absolute;
+}
+
+.radarPointer {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-accent));
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 50%;
+  animation: sweep 4s linear infinite;
+  box-shadow: 0 0 10px var(--primary-accent);
+}
+
+@keyframes sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.featureCard {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureCard h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.featureCard p {
+  color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+  
+  .heroContent {
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+}
